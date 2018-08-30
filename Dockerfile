@@ -5,7 +5,7 @@ COPY go.mod .
 COPY go.sum .
 COPY app app
 
-RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -a -installsuffix nocgo -a -o setlxplay ./app
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -a -installsuffix nocgo -o setlxplay ./app
 
 
 # FROM gcr.io/distroless/java
